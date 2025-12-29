@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delta Why | Code • Flow • Growth</title>
+    <meta name="description" content="Senior PHP Developer exploring Vibe Coding, Biohacking & DevOps.">
+    
+    <!-- Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons: FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        dark: {
+                            900: '#0f0f11',
+                            800: '#18181b',
+                        }
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1s ease-out forwards',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Glassmorphism Utilities that are trickier in pure Tailwind config */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .glass-btn {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Gradient Background */
+        .bg-glow {
+            background: radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.15) 0%, rgba(15, 15, 17, 0) 60%),
+                        radial-gradient(circle at 80% 10%, rgba(139, 92, 246, 0.1) 0%, rgba(15, 15, 17, 0) 50%),
+                        #0f0f11;
+        }
+    </style>
+</head>
+<body class="bg-glow text-gray-200 min-h-screen flex flex-col items-center justify-center p-4 antialiased selection:bg-indigo-500/30">
+
+    <!-- Ambient Background Elements -->
+    <div class="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+        <div class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-blue-500/10 rounded-full blur-[100px] animate-float" style="animation-delay: 0s;"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-96 h-96 bg-purple-500/10 rounded-full blur-[100px] animate-float" style="animation-delay: 2s;"></div>
+    </div>
+
+    <!-- Main Container -->
+    <main class="w-full max-w-lg mx-auto opacity-0 animate-fade-in">
+        
+        <!-- Profile Section -->
+        <div class="flex flex-col items-center mb-10 text-center">
+            <div class="relative group cursor-default">
+                <div class="absolute -inset-0.5 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full blur opacity-50 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+                <img src="assets/avatar.png" 
+                     alt="Delta Why" 
+                     class="relative w-36 h-36 rounded-full border-[3px] border-white/10 shadow-2xl object-cover object-[56%] transform transition duration-500 hover:scale-105">
+            </div>
+            
+            <h1 class="mt-6 text-3xl font-bold tracking-tight text-white">Delta Why</h1>
+            <p class="text-indigo-400 font-medium text-sm mt-2 tracking-wide uppercase opacity-90">Code • Flow • Growth</p>
+            
+            <p class="mt-4 text-gray-400 max-w-xs leading-relaxed text-sm">
+                Senior PHP Dev. Recovering from burnout. Exploring Vibe Coding, Biohacking & DevOps.
+            </p>
+        </div>
+
+        <!-- Links Section -->
+        <div class="space-y-4 w-full px-2">
+            
+            <!-- YouTube -->
+            <a href="https://youtube.com/@deltawhy_dev" target="_blank" rel="noopener noreferrer" 
+               class="glass-btn group flex items-center justify-between px-6 py-4 rounded-xl hover:bg-red-500/10 hover:border-red-500/30 hover:shadow-[0_0_20px_rgba(220,38,38,0.2)]">
+                <div class="flex items-center space-x-4">
+                    <div class="text-2xl w-8 text-center text-gray-400 group-hover:text-red-500 transition-colors">
+                        <i class="fa-brands fa-youtube"></i>
+                    </div>
+                    <span class="font-medium text-gray-200 group-hover:text-white transition-colors">YouTube</span>
+                </div>
+                <div class="text-gray-500 group-hover:translate-x-1 transition-transform">
+                    <i class="fa-solid fa-chevron-right text-xs"></i>
+                </div>
+            </a>
+
+            <!-- Telegram -->
+            <a href="https://t.me/delta_why" target="_blank" rel="noopener noreferrer" 
+               class="glass-btn group flex items-center justify-between px-6 py-4 rounded-xl hover:bg-blue-500/10 hover:border-blue-500/30 hover:shadow-[0_0_20px_rgba(59,130,246,0.2)]">
+                <div class="flex items-center space-x-4">
+                    <div class="text-2xl w-8 text-center text-gray-400 group-hover:text-blue-400 transition-colors">
+                        <i class="fa-brands fa-telegram"></i>
+                    </div>
+                    <span class="font-medium text-gray-200 group-hover:text-white transition-colors">Telegram</span>
+                </div>
+                <div class="text-gray-500 group-hover:translate-x-1 transition-transform">
+                    <i class="fa-solid fa-chevron-right text-xs"></i>
+                </div>
+            </a>
+
+            <!-- Twitter / X -->
+            <a href="https://x.com/deltawhy_dev" target="_blank" rel="noopener noreferrer" 
+               class="glass-btn group flex items-center justify-between px-6 py-4 rounded-xl hover:bg-white/5 hover:border-white/30 hover:shadow-[0_0_20px_rgba(255,255,255,0.1)]">
+                <div class="flex items-center space-x-4">
+                    <div class="text-2xl w-8 text-center text-gray-400 group-hover:text-white transition-colors">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </div>
+                    <span class="font-medium text-gray-200 group-hover:text-white transition-colors">Twitter / X</span>
+                </div>
+                <div class="text-gray-500 group-hover:translate-x-1 transition-transform">
+                    <i class="fa-solid fa-chevron-right text-xs"></i>
+                </div>
+            </a>
+
+            <!-- GitHub -->
+            <a href="https://github.com/DeltaWhyDev" target="_blank" rel="noopener noreferrer" 
+               class="glass-btn group flex items-center justify-between px-6 py-4 rounded-xl hover:bg-gray-600/10 hover:border-gray-500/30 hover:shadow-[0_0_20px_rgba(107,114,128,0.2)]">
+                <div class="flex items-center space-x-4">
+                    <div class="text-2xl w-8 text-center text-gray-400 group-hover:text-gray-300 transition-colors">
+                        <i class="fa-brands fa-github"></i>
+                    </div>
+                    <span class="font-medium text-gray-200 group-hover:text-white transition-colors">GitHub</span>
+                </div>
+                <div class="text-gray-500 group-hover:translate-x-1 transition-transform">
+                    <i class="fa-solid fa-chevron-right text-xs"></i>
+                </div>
+            </a>
+
+            <!-- Instagram -->
+            <a href="https://instagram.com/deltawhy_dev" target="_blank" rel="noopener noreferrer" 
+               class="glass-btn group flex items-center justify-between px-6 py-4 rounded-xl hover:bg-pink-500/10 hover:border-pink-500/30 hover:shadow-[0_0_20px_rgba(236,72,153,0.2)]">
+                <div class="flex items-center space-x-4">
+                    <div class="text-2xl w-8 text-center text-gray-400 group-hover:text-pink-400 transition-colors">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                    <span class="font-medium text-gray-200 group-hover:text-white transition-colors">Instagram</span>
+                </div>
+                <div class="text-gray-500 group-hover:translate-x-1 transition-transform">
+                    <i class="fa-solid fa-chevron-right text-xs"></i>
+                </div>
+            </a>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-12 text-center opacity-0 animate-fade-in" style="animation-delay: 0.3s;">
+        <p class="text-xs text-gray-500 font-light tracking-wide">
+            © 2025 Delta Why. Built with <span class="text-indigo-400">Flow</span>.
+        </p>
+    </footer>
+
+</body>
+</html>
